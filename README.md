@@ -1,7 +1,7 @@
 # Roadtothegods
 line 2 -40 - Here you will find all the ideas and thing I want to implement in my games. Any help will be greatly apreaciated!
 Part 1- The Main idea of the game:
-The game is a cliker/Incremental RPG game with a touch of turn base style.
+The game is a clicker/Incremental RPG game with a touch of turn base style.
 The player( you) need to get climb the tower.
 The tower is going to consist of different floors.
 In each floor there will be 7 monster, 1 boss , 1 guardian that only appear after you have kill the monster and boss a certain amount of time.
