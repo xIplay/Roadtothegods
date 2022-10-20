@@ -11,6 +11,10 @@ var servant_amount = 0
 var souls = 1
 var attack = 2
 export (float) var regen = 0.1
+Var attack_bonus = 1
+Var defense_bonus = 1
+Var soulbonus = souls * 0.01
+Var exp_bonus = 1
 
 
 func set_hp(newhp):
