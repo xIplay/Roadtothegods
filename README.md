@@ -18,7 +18,7 @@ The servants:
 The servant will be your auto system in the game.
 You can buy servant with souls , these servant can kill the enemys for your by you clicking a check box to activate this feature.They cant automatically kill the gods for you.But they will be able to participate in any event that requiere the player to click.
 In the servant hall you can summon the servant, train your servant and enchance your servants.
-Servant will inherited the players attack. At first only half but as you train them they will eventually be more stronger than you.
+Servant will inherited the players attack, At first only half of the player attack but as you train them they will eventually be more stronger than you.
 When you enchance a servant it will increase the amount of EXP and Souls you recieve by killing monster.
 
 Prestige System:
@@ -31,6 +31,7 @@ Attack , defense, amount of servant , amount of souls , mp and hp , ect.
 Active skills are skill only use for gods battle.
 Passive Skill are going to affect the clicking part of the game as well as the gods battler.Ex:
 --Increase soul gain, exp gain, attack , defense , lower price of servant, boss dmg, gods damage, resistants to aliments, hp increases, ect.
+I will like to implement a class base system for the player where different classes will have different skills.
 
 Events:
 These event are going to be speacial floor with speacil monster providing extra amount of experience or souls depend on the events. 
