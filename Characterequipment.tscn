@@ -1,0 +1,326 @@
+[gd_scene load_steps=11 format=2]
+
+[ext_resource path="res://Art/bg.png" type="Texture" id=1]
+[ext_resource path="res://Art/anvil.png" type="Texture" id=2]
+[ext_resource path="res://achievementsaa.ttf" type="DynamicFontData" id=3]
+[ext_resource path="res://weapons/Old Sword.png" type="Texture" id=4]
+[ext_resource path="res://EquipmentSlot.gd" type="Script" id=5]
+[ext_resource path="res://Art/fizzing-flask.png" type="Texture" id=6]
+[ext_resource path="res://characterequipment.gd" type="Script" id=7]
+
+[sub_resource type="DynamicFont" id=1]
+size = 20
+use_filter = true
+font_data = ExtResource( 3 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 18
+use_filter = true
+font_data = ExtResource( 3 )
+
+[sub_resource type="StyleBoxFlat" id=4]
+bg_color = Color( 0.00392157, 0, 0, 0.909804 )
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color( 0.929412, 0.560784, 0, 1 )
+border_blend = true
+
+[node name="Characterequipment" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 7 )
+
+[node name="character" type="VBoxContainer" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+[node name="Header" type="HBoxContainer" parent="character"]
+margin_right = 1024.0
+margin_bottom = 30.0
+rect_min_size = Vector2( 0, 30 )
+
+[node name="Label" type="Label" parent="character/Header"]
+margin_right = 1024.0
+margin_bottom = 30.0
+size_flags_horizontal = 3
+size_flags_vertical = 1
+custom_fonts/font = SubResource( 1 )
+text = "Player's  Room"
+align = 1
+valign = 1
+
+[node name="chracterequip" type="HBoxContainer" parent="character"]
+margin_top = 34.0
+margin_right = 1024.0
+margin_bottom = 600.0
+rect_min_size = Vector2( 0, 30 )
+size_flags_vertical = 3
+
+[node name="leftequipment" type="VBoxContainer" parent="character/chracterequip"]
+margin_right = 338.0
+margin_bottom = 566.0
+size_flags_horizontal = 3
+
+[node name="HBoxContainer" type="HBoxContainer" parent="character/chracterequip/leftequipment"]
+margin_right = 338.0
+margin_bottom = 186.0
+size_flags_vertical = 3
+
+[node name="MarginContainer2" type="MarginContainer" parent="character/chracterequip/leftequipment/HBoxContainer"]
+margin_right = 10.0
+margin_bottom = 186.0
+rect_min_size = Vector2( 10, 0 )
+
+[node name="label" type="Label" parent="character/chracterequip/leftequipment/HBoxContainer"]
+margin_left = 14.0
+margin_top = 79.0
+margin_right = 234.0
+margin_bottom = 106.0
+size_flags_horizontal = 3
+custom_fonts/font = SubResource( 2 )
+text = "Head"
+align = 1
+valign = 1
+
+[node name="Head" type="TextureRect" parent="character/chracterequip/leftequipment/HBoxContainer"]
+margin_left = 238.0
+margin_right = 338.0
+margin_bottom = 186.0
+rect_min_size = Vector2( 100, 70 )
+texture = ExtResource( 1 )
+expand = true
+
+[node name="icon" type="TextureRect" parent="character/chracterequip/leftequipment/HBoxContainer/Head"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+expand = true
+script = ExtResource( 5 )
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="character/chracterequip/leftequipment"]
+margin_top = 190.0
+margin_right = 338.0
+margin_bottom = 376.0
+size_flags_vertical = 3
+
+[node name="MarginContainer2" type="MarginContainer" parent="character/chracterequip/leftequipment/HBoxContainer2"]
+margin_right = 10.0
+margin_bottom = 186.0
+rect_min_size = Vector2( 10, 0 )
+
+[node name="label" type="Label" parent="character/chracterequip/leftequipment/HBoxContainer2"]
+margin_left = 14.0
+margin_top = 79.0
+margin_right = 234.0
+margin_bottom = 106.0
+size_flags_horizontal = 3
+custom_fonts/font = SubResource( 2 )
+text = "Torso"
+align = 1
+valign = 1
+
+[node name="Torso" type="TextureRect" parent="character/chracterequip/leftequipment/HBoxContainer2"]
+margin_left = 238.0
+margin_right = 338.0
+margin_bottom = 186.0
+rect_min_size = Vector2( 100, 70 )
+texture = ExtResource( 1 )
+expand = true
+
+[node name="icon" type="TextureRect" parent="character/chracterequip/leftequipment/HBoxContainer2/Torso"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+expand = true
+script = ExtResource( 5 )
+
+[node name="HBoxContainer3" type="HBoxContainer" parent="character/chracterequip/leftequipment"]
+margin_top = 380.0
+margin_right = 338.0
+margin_bottom = 566.0
+size_flags_vertical = 3
+
+[node name="MarginContainer2" type="MarginContainer" parent="character/chracterequip/leftequipment/HBoxContainer3"]
+margin_right = 10.0
+margin_bottom = 186.0
+rect_min_size = Vector2( 10, 0 )
+
+[node name="label" type="Label" parent="character/chracterequip/leftequipment/HBoxContainer3"]
+margin_left = 14.0
+margin_top = 79.0
+margin_right = 234.0
+margin_bottom = 106.0
+size_flags_horizontal = 3
+custom_fonts/font = SubResource( 2 )
+text = "Legs"
+align = 1
+valign = 1
+
+[node name="Legs" type="TextureRect" parent="character/chracterequip/leftequipment/HBoxContainer3"]
+margin_left = 238.0
+margin_right = 338.0
+margin_bottom = 186.0
+rect_min_size = Vector2( 100, 70 )
+texture = ExtResource( 1 )
+expand = true
+
+[node name="icon" type="TextureRect" parent="character/chracterequip/leftequipment/HBoxContainer3/Legs"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+expand = true
+script = ExtResource( 5 )
+
+[node name="character" type="VBoxContainer" parent="character/chracterequip"]
+margin_left = 342.0
+margin_right = 681.0
+margin_bottom = 566.0
+size_flags_horizontal = 3
+
+[node name="panel" type="Panel" parent="character/chracterequip/character"]
+margin_right = 339.0
+margin_bottom = 566.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_styles/panel = SubResource( 4 )
+
+[node name="HBoxContainer" type="HBoxContainer" parent="character/chracterequip/character/panel"]
+anchor_right = 1.0
+margin_left = 5.0
+margin_top = 5.0
+margin_right = -5.0
+margin_bottom = 40.0
+
+[node name="Blacksmith" type="TextureButton" parent="character/chracterequip/character/panel/HBoxContainer"]
+margin_right = 40.0
+margin_bottom = 40.0
+rect_min_size = Vector2( 40, 40 )
+texture_normal = ExtResource( 2 )
+expand = true
+
+[node name="MarginContainer" type="MarginContainer" parent="character/chracterequip/character/panel/HBoxContainer"]
+margin_left = 44.0
+margin_right = 285.0
+margin_bottom = 40.0
+size_flags_horizontal = 3
+
+[node name="Alchemist" type="TextureButton" parent="character/chracterequip/character/panel/HBoxContainer"]
+margin_left = 289.0
+margin_right = 329.0
+margin_bottom = 40.0
+rect_min_size = Vector2( 40, 0 )
+texture_normal = ExtResource( 6 )
+expand = true
+
+[node name="rightequipment" type="VBoxContainer" parent="character/chracterequip"]
+margin_left = 685.0
+margin_right = 1024.0
+margin_bottom = 566.0
+size_flags_horizontal = 3
+
+[node name="HBoxContainer" type="HBoxContainer" parent="character/chracterequip/rightequipment"]
+margin_right = 339.0
+margin_bottom = 184.0
+size_flags_vertical = 3
+
+[node name="Hand" type="TextureRect" parent="character/chracterequip/rightequipment/HBoxContainer"]
+margin_right = 100.0
+margin_bottom = 184.0
+rect_min_size = Vector2( 100, 70 )
+texture = ExtResource( 1 )
+expand = true
+
+[node name="icon" type="TextureRect" parent="character/chracterequip/rightequipment/HBoxContainer/Hand"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+texture = ExtResource( 4 )
+expand = true
+script = ExtResource( 5 )
+
+[node name="label" type="Label" parent="character/chracterequip/rightequipment/HBoxContainer"]
+margin_left = 104.0
+margin_top = 78.0
+margin_right = 339.0
+margin_bottom = 105.0
+size_flags_horizontal = 3
+custom_fonts/font = SubResource( 2 )
+text = "Hand"
+align = 1
+valign = 1
+
+[node name="MarginContainer2" type="MarginContainer" parent="character/chracterequip/rightequipment"]
+margin_top = 188.0
+margin_right = 339.0
+margin_bottom = 188.0
+rect_min_size = Vector2( 10, 0 )
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="character/chracterequip/rightequipment"]
+margin_top = 192.0
+margin_right = 339.0
+margin_bottom = 377.0
+size_flags_vertical = 3
+
+[node name="OffHand" type="TextureRect" parent="character/chracterequip/rightequipment/HBoxContainer2"]
+margin_right = 100.0
+margin_bottom = 185.0
+rect_min_size = Vector2( 100, 70 )
+texture = ExtResource( 1 )
+expand = true
+
+[node name="icon" type="TextureRect" parent="character/chracterequip/rightequipment/HBoxContainer2/OffHand"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+expand = true
+script = ExtResource( 5 )
+
+[node name="label" type="Label" parent="character/chracterequip/rightequipment/HBoxContainer2"]
+margin_left = 104.0
+margin_top = 79.0
+margin_right = 325.0
+margin_bottom = 106.0
+size_flags_horizontal = 3
+custom_fonts/font = SubResource( 2 )
+text = "Off-Hand"
+align = 1
+valign = 1
+
+[node name="MarginContainer2" type="MarginContainer" parent="character/chracterequip/rightequipment/HBoxContainer2"]
+margin_left = 329.0
+margin_right = 339.0
+margin_bottom = 185.0
+rect_min_size = Vector2( 10, 0 )
+
+[node name="HBoxContainer3" type="HBoxContainer" parent="character/chracterequip/rightequipment"]
+margin_top = 381.0
+margin_right = 339.0
+margin_bottom = 566.0
+size_flags_vertical = 3
+
+[node name="Accessory" type="TextureRect" parent="character/chracterequip/rightequipment/HBoxContainer3"]
+margin_right = 100.0
+margin_bottom = 185.0
+rect_min_size = Vector2( 100, 70 )
+texture = ExtResource( 1 )
+expand = true
+
+[node name="icon" type="TextureRect" parent="character/chracterequip/rightequipment/HBoxContainer3/Accessory"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+expand = true
+script = ExtResource( 5 )
+
+[node name="label" type="Label" parent="character/chracterequip/rightequipment/HBoxContainer3"]
+margin_left = 104.0
+margin_top = 79.0
+margin_right = 325.0
+margin_bottom = 106.0
+size_flags_horizontal = 3
+custom_fonts/font = SubResource( 2 )
+text = "Accessory  "
+align = 1
+valign = 1
+
+[node name="MarginContainer2" type="MarginContainer" parent="character/chracterequip/rightequipment/HBoxContainer3"]
+margin_left = 329.0
+margin_right = 339.0
+margin_bottom = 185.0
+rect_min_size = Vector2( 10, 0 )
